@@ -54,7 +54,9 @@ table {
 body {
   font-family: 'Lato', sans-serif;
   background-image: url("./../assets/template.jpg");
-  background-size: cover; }
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position-x: center; }
 
 p {
   font-family: 'EB Garamond', serif; }
@@ -71,31 +73,33 @@ a {
     font-weight: 400;
     color: red;
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: 1336px;
     display: flex;
     justify-content: space-between;
     align-items: center; }
 
 .logo {
-  margin: 18px 0px;
+  margin: 24px 0px;
   display: flex;
   justify-content: flex-start;
   align-items: center; }
   .logo__icon {
-    width: 32px;
-    height: 32px;
-    line-height: 28px;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
     text-align: center;
-    font-size: 24px;
-    margin-right: 20px;
+    font-size: 30px;
+    margin-right: 30px;
     border: 2px solid red;
     border-radius: 50%; }
   .logo__title {
-    letter-spacing: 6px;
-    font-size: 16px; }
+    letter-spacing: 8px;
+    font-size: 20px; }
 
 .navigation__item {
-  margin-left: 20px; }
+  font-size: 20px;
+  margin-left: 16px;
+  letter-spacing: 2px; }
 
 .title-section {
   max-width: 836px;
