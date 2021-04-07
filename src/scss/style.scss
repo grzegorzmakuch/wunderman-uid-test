@@ -1,0 +1,107 @@
+@import "./../../node_modules/reset-css/sass/reset";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+$mainFont: red;
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-image: url('./../assets/template.jpg');
+    background-size: cover;
+}
+
+p {
+    font-family: 'EB Garamond', serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.top-header {
+    width: 100vw;
+    background-image: linear-gradient(rgba(0, 66, 123, .8),rgba(0, 66, 123, 0));
+    padding-bottom: 120px;
+    &__content {
+        font-weight: 400;
+        color: $mainFont;
+        margin: 0 auto;
+        max-width: 1000px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.logo { 
+    margin: 18px 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    &__icon {
+        width: 32px;
+        height: 32px;
+        line-height: 28px;
+        text-align: center;
+        font-size: 24px;
+        margin-right: 20px;
+        border: 2px solid $mainFont;
+        border-radius: 50%;
+    }
+    &__title {
+        letter-spacing: 6px;
+        font-size: 16px;    
+    }
+}
+
+.navigation {
+    &__item {
+        margin-left: 20px;
+    }
+}
+
+
+
+.title-section {
+    max-width: 836px;
+    text-align: left;
+    margin: 0 auto;
+    color: $mainFont;
+    &__subheading {
+        text-transform: uppercase;
+        color: $mainFont;
+        font-size: 24px;
+        letter-spacing: .4px;
+        margin-bottom: 16px;
+    }
+    &__heading {
+        text-transform: uppercase;
+        color: $mainFont;
+        font-weight: 700;
+        font-size: 134px;
+        letter-spacing: -6px;
+        margin-bottom: 36px;
+    }
+    &__paragraph {
+        width: 600px;
+        line-height: 18px;
+        margin-bottom: 56px;
+    }
+}
+
+.button-action {
+    color: $mainFont;
+    border: 2px solid $mainFont;
+    background: none;
+    width: 170px;
+    height: 36px;
+    text-transform: uppercase;
+    color: $mainFont;
+    font-size: 12px;
+}
+
+.see-more {
+    display: inline-block;
+    color: blue;
+}
