@@ -68,7 +68,7 @@ a {
 .top-header {
   width: 100vw;
   background-image: linear-gradient(rgba(0, 66, 123, 0.8), rgba(0, 66, 123, 0));
-  padding-bottom: 120px; }
+  padding-bottom: 162px; }
   .top-header__content {
     font-weight: 400;
     color: red;
@@ -98,42 +98,44 @@ a {
 
 .navigation__item {
   font-size: 20px;
-  margin-left: 16px;
-  letter-spacing: 2px; }
+  margin-left: 24px;
+  letter-spacing: 1.2px; }
 
 .title-section {
-  max-width: 836px;
+  max-width: 1112px;
   text-align: left;
   margin: 0 auto;
   color: red; }
   .title-section__subheading {
     text-transform: uppercase;
     color: red;
-    font-size: 24px;
-    letter-spacing: .4px;
-    margin-bottom: 16px; }
+    font-size: 30px;
+    letter-spacing: 1.6px;
+    margin-bottom: 22px; }
   .title-section__heading {
     text-transform: uppercase;
     color: red;
     font-weight: 700;
-    font-size: 134px;
-    letter-spacing: -6px;
-    margin-bottom: 36px; }
+    font-size: 180px;
+    letter-spacing: -10px;
+    margin-bottom: 48px; }
   .title-section__paragraph {
-    width: 600px;
-    line-height: 18px;
-    margin-bottom: 56px; }
+    width: 800px;
+    line-height: 24px;
+    margin-bottom: 48px; }
 
 .button-action {
-  color: red;
-  border: 2px solid red;
+  color: limegreen;
+  border: 2px solid limegreen;
   background: none;
-  width: 170px;
-  height: 36px;
+  width: 226px;
+  height: 46px;
+  line-height: 46px;
+  font-weight: 400;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
-  color: red;
-  font-size: 12px; }
+  font-size: 16px; }
 
 .see-more {
   display: inline-block;
-  color: blue; }
+  color: limegreen; }
