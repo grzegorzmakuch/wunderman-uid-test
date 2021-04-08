@@ -1,22 +1,32 @@
 @import "./../../node_modules/reset-css/sass/reset";
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
 
-$mainFont: red;
+@import "variables.scss";
+// @import "./modules/header.scss";
+
+$mainFont: #F7F8FA;
 $tempColor: limegreen;
 $headerBlue: #00427C;
 $backgroundGrey: #F7F8FA;
+$neutral: #000;
 
-* {
+html {
     box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
 
 body {
     font-family: 'Lato', sans-serif;
-    background-image: url('./../assets/template.jpg');
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-position-x: center;
+    // background-image: url('./../assets/template.jpg');
+    // background-size: auto;
+    // background-repeat: no-repeat;
+    // background-position-x: center;
 }
 
 p {
@@ -28,23 +38,25 @@ a {
     color: inherit;
 }
 
-.top-header {
-    width: 100vw;
-    background-image: linear-gradient(rgba(0, 66, 123, .8),rgba(0, 66, 123, 0));
-    padding-bottom: 161px;
-    &__content {
-        font-weight: 400;
-        color: $mainFont;
-        margin: 0 auto;
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: url('./../assets/main-img.jpg');
+    background-size: cover;
+    margin-bottom: 120px;
+    // background-image: linear-gradient(rgba(0, 66, 123, .8),rgba(0, 66, 123, 0));
+    &__container {
+        margin: 0 auto 184px;
         max-width: 1336px;
+        padding-top: 24px;
+        color: $mainFont;
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
     }
 }
 
 .logo { 
-    margin: 24px 0px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -72,11 +84,12 @@ a {
     }
 }
 
-.title-section {
+.hero {
+    // border: 1px solid lime;
+    height: calc(100vh - 420px);
     max-width: 1112px;
-    height: 820px;
     text-align: left;
-    margin: 0 auto 110px;
+    margin: 0 auto;
     position: relative;
     color: $mainFont;
     &__subheading {
@@ -84,12 +97,12 @@ a {
         color: $mainFont;
         font-size: 30px;
         letter-spacing: 1.6px;
-        margin-bottom: 20px;
+        margin-bottom: 22px;
     }
     &__heading {
         text-transform: uppercase;
         color: $mainFont;
-        font-weight: 700;
+        font-weight: 900;
         font-size: 182px;
         letter-spacing: -9px;
         margin-bottom: 46px;
@@ -98,13 +111,13 @@ a {
     &__paragraph {
         width: 800px;
         line-height: 24px;
-        margin-bottom: 48px;
+        margin-bottom: 50px;
     }
 }
 
 .button-action {
-    color: $tempColor;
-    border: 2px solid $tempColor;
+    color: $mainFont;
+    border: 2px solid $mainFont;
     background: none;
     width: 226px;
     height: 46px;
@@ -124,64 +137,80 @@ a {
     letter-spacing: -.6px;
     text-transform: uppercase;
     display: block;
-    color: limegreen;
+    color: $mainFont;
     margin: 0 auto;
     position: absolute;
     bottom: 56px;
-    left: 47%;
+    left: 47vw;
 }
+
 
 .content {
     // border: 1px solid darkmagenta;
-    // max-width: 1112px;
-    padding: 0 280px;
+    max-width: 1112px;
+    padding: 0 120px;
     margin: 0 auto 166px;
     text-align: center;
     &__heading {
         text-transform: uppercase;
-        font-weight: 700;
+        font-weight: 900;
         font-size: 78px;
         letter-spacing: -2px;
-        color: $tempColor;
+        color: $headerBlue;
         margin-bottom: 24px;
     }
     &__subheading {
         text-transform: uppercase;
         font-size: 20px;
-        color: $tempColor;
+        color: $neutral;
         letter-spacing: 1px;
         margin-bottom: 28px;
     }
     &__paragraph {
-        color: $mainFont;
+        color: $neutral;
         line-height: 24px;
         font-size: 16px;
     }
 }
 
 .gallery {
+    max-width: 1920px;
     margin: 0 auto 400px;
     display: flex;
-    // background-color: $backgroundGrey;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: $backgroundGrey;
 }
 
 .view {
-    width: 58%;
+    width: 56%;
+    border: 1px solid green;
+    position: relative;
+    &__main {
+        position: absolute;
+        right: 0;
+        top: -46px;
+        border: 1px solid violet;
+        width: 800px;
+        height: 600px;
+    }
 }
 
 .aside-content {
-    width: 42%;
+    width: 44%;
     padding: 92px 128px;
+    border:1px solid red;
     &__heading {
         text-transform: uppercase;
         font-size: 48px;
-        font-weight: 700;
+        font-weight: 900;
         letter-spacing: -2px;
-        color: $tempColor;
+        color: $headerBlue;
         margin-bottom: 28px;
     }
     &__paragraph {
-        color: $tempColor;
+        width: 320px;
+        color: $neutral;
         line-height: 24px;
     }
 }
