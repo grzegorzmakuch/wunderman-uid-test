@@ -10,9 +10,11 @@ $tempColor: limegreen;
 $headerBlue: #00427C;
 $backgroundGrey: #F7F8FA;
 $neutral: #000;
+$neutralDark: #1a262f;
 
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *,
@@ -31,11 +33,18 @@ body {
 
 p {
     font-family: 'EB Garamond', serif;
+    font-size: 18px;
 }
 
 a {
     text-decoration: none;
     color: inherit;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .header {
@@ -44,8 +53,8 @@ a {
     background-image: url('./../assets/main-img.jpg');
     background-size: cover;
     margin-bottom: 120px;
-    // background-image: linear-gradient(rgba(0, 66, 123, .8),rgba(0, 66, 123, 0));
     &__container {
+        // background-image: linear-gradient(rgba(0, 66, 123, .8),rgba(0, 66, 123, 0)); 
         margin: 0 auto 184px;
         max-width: 1336px;
         padding-top: 24px;
@@ -81,16 +90,18 @@ a {
         font-size: 20px;
         margin-left: 22px;
         letter-spacing: 1.4px;
+        transition: color .2s ease;
+        &:hover {
+            color: #ccc;
+        }
     }
 }
 
 .hero {
-    // border: 1px solid lime;
     height: calc(100vh - 420px);
     max-width: 1112px;
     text-align: left;
-    margin: 0 auto;
-    position: relative;
+    margin: 0 auto 100px;
     color: $mainFont;
     &__subheading {
         text-transform: uppercase;
@@ -121,14 +132,13 @@ a {
     background: none;
     width: 226px;
     height: 46px;
-    // line-height: 46px;
     font-weight: 400;
     letter-spacing: 1.2px;
     text-transform: uppercase;
     font-size: 16px;
+    transition: background-color .2s ease;
     &:hover{
-        background-color: $headerBlue;
-        opacity: .3;
+        background-color: rgba(255,255,255,.2);
         cursor: pointer;
     }
 }
@@ -137,11 +147,9 @@ a {
     letter-spacing: -.6px;
     text-transform: uppercase;
     display: block;
+    text-align: center;
     color: $mainFont;
     margin: 0 auto;
-    position: absolute;
-    bottom: 56px;
-    left: 47vw;
 }
 
 
@@ -174,31 +182,70 @@ a {
 }
 
 .gallery {
-    max-width: 1920px;
-    margin: 0 auto 400px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    margin-bottom: 120px;
     background-color: $backgroundGrey;
+    &__container {
+        margin: 0 auto;
+        max-width: 1336px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
 }
 
-.view {
+.image-viewer {
     width: 56%;
     border: 1px solid green;
-    position: relative;
-    &__main {
-        position: absolute;
-        right: 0;
-        top: -46px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    &__picture {
         border: 1px solid violet;
-        width: 800px;
+        width: 100%;
         height: 600px;
     }
+    &__thumbnails {
+        border: 1px solid red;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+    }
+    &__thumbnails--item {
+        margin: 20px 0;
+        width: 100px;
+        height: 78px;
+        list-style: none;
+        display: block;
+    }
+    &__buttons {
+        font-size: 36px;
+        text-align: center;
+        &--next {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: $headerBlue;
+            color: $mainFont;
+        }
+        &--prev {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: $headerBlue;
+            color: $mainFont;
+        }
+        &:hover {
+            cursor: pointer
+        }
+    }
+    
 }
 
 .aside-content {
     width: 44%;
-    padding: 92px 128px;
+    padding: 92px 120px;
     border:1px solid red;
     &__heading {
         text-transform: uppercase;
@@ -212,5 +259,58 @@ a {
         width: 320px;
         color: $neutral;
         line-height: 24px;
+    }
+}
+
+.bonus-content {
+    //  border: 1px solid darkmagenta;
+     max-width: 1336px;
+     padding: 0 200px 0 0;
+     margin: 0 auto;
+     text-align: left;
+     &__heading {
+         text-transform: uppercase;
+         font-weight: 900;
+         font-size: 78px;
+         letter-spacing: -2px;
+         color: $headerBlue;
+         margin-bottom: 28px;
+     }
+     &__subheading {
+         text-transform: uppercase;
+         font-size: 20px;
+         color: $neutral;
+         letter-spacing: 1px;
+         margin-bottom: 24px;
+     }
+     &__paragraph {
+         color: $neutral;
+         line-height: 24px;
+         font-size: 18px;
+         padding-bottom: 18px;
+     }
+}
+
+.footer {
+    background-color: $neutralDark;
+    color: $mainFont;
+    &__container {
+        margin: 0 auto;
+        border: 1px solid red;
+        padding: 24px 0;
+        max-width: 1336px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo {
+        width: 60px;
+        height: 60px;
+        line-height: 50px;
+        text-align: center;
+        font-size: 36px;
+        margin-right: 30px;
+        border: 2px solid $mainFont;
+        border-radius: 50%;
     }
 }

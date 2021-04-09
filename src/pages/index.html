@@ -8,7 +8,7 @@
     <title>Test UID - Grzegorz Makuch</title>
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <div class="header__container">
             <div class="logo">
                 <div class="logo__icon">A</div>
@@ -36,45 +36,60 @@
             <p class="content__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque illum a beatae excepturi, harum ab sed maiores nam quo! Excepturi, reprehenderit! Ea dolorum quaerat facere nulla dignissimos, assumenda fugiat voluptatum! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias quos ad autem accusamus natus reiciendis necessitatibus veniam dignissimos enim error nulla, quis cupiditate accusantium quaerat sequi corrupti provident maxime ratione. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis inventore quia unde ipsum? Officiis ab dolorem provident mollitia at eius, numquam voluptates, magnam maxime in, quae odio. Tenetur, dicta possimus.</p>
         </section>
         <section class="gallery">
-            <div class="view">
-                <div class="view__main"></div>
-                <div class="view__miniatures"></div>
+            <div class="gallery__container">
+                <div class="image-viewer">
+                    <div class="image-viewer__picture"></div>
+                    <ul class="image-viewer__thumbnails"></ul>
+                    <div class="image-viewer__buttons">
+                        <div class="image-viewer__buttons--prev">&#8592;</div>
+                        <div class="image-viewer__buttons--next">&#8594;</div>
+                    </div>
+                </div>
+                <aside class="aside-content">
+                    <h2 class="aside-content__heading">questions?</h2>
+                    <p class="aside-content__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. In nihil laboriosam sunt quidem distinctio sit, reprehenderit magni nemo, mollitia facilis omnis, corporis repudiandae fugiat eaque alias ad quia illum eveniet? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam voluptate odio soluta corporis molestias quo illo, ducimus rem esse recusandae doloremque! Commodi esse aut soluta eum culpa ut reprehenderit impedit?</p>
+                </aside>
             </div>
+        </section>
+        <section class="bonus-content">
+            <h2 class="bonus-content__subheading">q subheading</h2>
+            <h3 class="bonus-content__heading">quisque ac elit</h3>
+            <article>
+                <p class="bonus-content__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque molestiae quibusdam, fugiat expedita quas, nam vitae odio dolor consequatur, ex obcaecati? Assumenda corrupti odio veniam amet non at consectetur nam! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo modi quam dolorum minima. Dolorum, quisquam in nihil, aspernatur molestiae nostrum quidem voluptas iste dolor molestias suscipit, maiores unde illum eveniet. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur blanditiis autem quod dignissimos totam, omnis eaque, placeat ut, suscipit repellat eos quas dolore. Ex libero laborum tempore iste, impedit delectus. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque, aspernatur, ut harum unde veritatis similique, maiores eligendi deleniti tenetur rem voluptates tempora. Consequuntur enim odio ex vero perspiciatis ipsam eveniet!</p>
+                <p class="bonus-content__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, doloribus hic non dolorem laborum, eaque quae sit quaerat praesentium, a sapiente vel. Laudantium ex qui distinctio dignissimos, dolore obcaecati repellendus.</p>
+                <p class="bonus-content__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nemo sint fugiat officia veniam commodi temporibus cupiditate. Eligendi unde, libero deleniti, non, ut culpa officia corporis numquam cum alias obcaecati! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, itaque voluptatum laborum in eius dolor dolores nisi non laudantium animi explicabo facilis, pariatur aut porro. Sit ipsa eveniet adipisci optio. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, provident officia necessitatibus quod modi rem sint veniam id porro laborum? Suscipit sed vel exercitationem soluta necessitatibus, quidem tenetur quo id.</p>
+                <p class="bonus-content__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis ipsam modi ipsa expedita? Nisi facere hic nesciunt fuga, ut at sequi dolores voluptate quod, quibusdam obcaecati nulla veritatis. Quidem, corporis?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea error eius voluptates ratione tenetur aut accusamus, dicta, nostrum magni, non quo. Quo, sit debitis quibusdam commodi nemo nesciunt voluptate dicta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad inventore nesciunt quisquam. Dolore laborum asperiores omnis suscipit perferendis nemo quis voluptate, commodi sapiente molestiae, beatae voluptates hic animi labore! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam qui ea, officia sed repudiandae doloribus porro praesentium recusandae accusamus atque odit natus quisquam voluptatibus ad? Labore corrupti tenetur molestiae amet.</p>
+            </article>
+        </section>
+        <section class="gallery">
             <aside class="aside-content">
-                <h2 class="aside-content__heading">questions?</h2>
+                <h2 class="aside-content__heading">high quality</h2>
                 <p class="aside-content__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. In nihil laboriosam sunt quidem distinctio sit, reprehenderit magni nemo, mollitia facilis omnis, corporis repudiandae fugiat eaque alias ad quia illum eveniet? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam voluptate odio soluta corporis molestias quo illo, ducimus rem esse recusandae doloremque! Commodi esse aut soluta eum culpa ut reprehenderit impedit?</p>
             </aside>
-        </section>
-        <section>
-            <h2>q subheading</h2>
-            <h3>quisque ac elit</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque molestiae quibusdam, fugiat expedita quas, nam vitae odio dolor consequatur, ex obcaecati? Assumenda corrupti odio veniam amet non at consectetur nam! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo modi quam dolorum minima. Dolorum, quisquam in nihil, aspernatur molestiae nostrum quidem voluptas iste dolor molestias suscipit, maiores unde illum eveniet.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, doloribus hic non dolorem laborum, eaque quae sit quaerat praesentium, a sapiente vel. Laudantium ex qui distinctio dignissimos, dolore obcaecati repellendus.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nemo sint fugiat officia veniam commodi temporibus cupiditate. Eligendi unde, libero deleniti, non, ut culpa officia corporis numquam cum alias obcaecati!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis ipsam modi ipsa expedita? Nisi facere hic nesciunt fuga, ut at sequi dolores voluptate quod, quibusdam obcaecati nulla veritatis. Quidem, corporis?</p>
-        </section>
-        <section>
-            <aside>
-                <h2>high quality</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, perspiciatis minima, est quasi voluptatum ea ratione voluptates culpa officia optio quo dolor in cum atque modi at suscipit sit magnam.</p>
-            </aside>
-            <div class="gallery">
-                <div class="gallery__main"></div>
-                <div class="gallery_miniatures"></div>
+            <div class="image-viewer">
+                <div class="image-viewer__picture"></div>
+                <ul class="image-viewer__thumbnails"></ul>
+                <div class="image-viewer__buttons">
+                    <div class="image-viewer__buttons--prev">&#8592;</div>
+                    <div class="image-viewer__buttons--next">&#8594;</div>
+                </div>
             </div>
         </section>
-        <footer>
-            <div class="logo">
-                <div class="logo__icon">A</div>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__logo">
+                    <a href="#header">A</a>
+                </div>
+                <nav class="navigation">
+                    <a class="navigation__item" href="#">About Us</a>
+                    <a class="navigation__item" href="#">Careers</a>
+                    <a class="navigation__item" href="#">News</a>
+                    <a class="navigation__item" href="#">Contact Us</a>
+                </nav>
+                <div>&#xA9; Copyright by ACME Co.</div>
             </div>
-            <nav class="navigation">
-                <a class="navigation__item" href="#">About Us</a>
-                <a class="navigation__item" href="#">Careers</a>
-                <a class="navigation__item" href="#">News</a>
-                <a class="navigation__item" href="#">Contact Us</a>
-            </nav>
-            <div>&#xA9; Copyright by ACME Co.</div>
         </footer>
     </main>
+    <script src="gallery.js"></script>
 </body>
 </html>
