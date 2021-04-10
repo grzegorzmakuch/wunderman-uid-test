@@ -1,50 +1,41 @@
-const prevBtn = document.querySelector('.image-viewer__buttons--prev');
-const nextBtn = document.querySelector('.image-viewer__buttons--next');
-const bigView = document.querySelector('.image-viewer__picture');
-const unorderedList = document.querySelector('.image-viewer__thumbnails');
+const prevBtn = document.querySelector('.js--btn-prev');
+const nextBtn = document.querySelector('.js--btn-next');
+const bigPicture = document.querySelector('.image-viewer__picture');
+const thumbnailsContainer = document.querySelector('.image-viewer__thumbnails');
+let activeThumbnails = document.getElementsByClassName('active');
+
 const folderName = "./../assets/img/";
 const fileExtension = ".jpg";
-let activeThumb = 1;
-let activeThumbValue = 1;
+const maxThumbnailsToView = 10; // powinno byc dynamiczne po przeskanowaniu folderu
 
-const itemsAmount = 5;
-
-function addListItem(val) {
-    const img = document.createElement('img');
-    img.src = folderName + val + fileExtension;
-    const newLi = document.createElement("li");
-    newLi.appendChild(img);
-    unorderedList.appendChild(newLi).className = "image-viewer__thumbnails--item";
+function loadThumbnails(fileName) {
+    const imgSelector = document.createElement('img');
+    imgSelector.src = folderName + fileName + fileExtension;
+    thumbnailsContainer.appendChild(imgSelector).className = "image-viewer__thumbnails--item";
 }
 
-for(let i = 1; i < itemsAmount; i++) {
-    addListItem(i);
+for(let i = 1; i < maxThumbnailsToView; i++) {
+    loadThumbnails(i);
 }
 
-const thumbs = document.querySelectorAll('.thumbnails--item');
-bigView.textContent = activeThumb;
+let thumbnails = document.getElementsByClassName('image-viewer__thumbnails--item');
+bigPicture.src = thumbnails[0].src;
+thumbnailsContainer.firstElementChild.classList.add('active');
 
-for(let i = 0; i < thumbs.length; i++) {
-    thumbs[i].addEventListener("click", function() {
-        activeThumbValue = new Number(thumbs[i].textContent);
+for(let i = 0; i < thumbnails.length; i++) {
+    thumbnails[i].addEventListener("click", () => {
+        if(activeThumbnails.length > 0) {
+            activeThumbnails[0].classList.remove('active');
+        }
+        thumbnails[i].classList.add('active');
+        bigPicture.src = thumbnails[i].src;
     })
 }
 
 nextBtn.addEventListener("click", () => {
-    if(activeThumbValue < itemsAmount) {
-        activeThumbValue++;
-        bigView.textContent = activeThumbValue;
-    } else {
-        nextBtn.removeAttribute("a");
-    }
-    
+    thumbnailsContainer.scrollLeft += 200;
 })
 
 prevBtn.addEventListener("click", () => {
-    if(activeThumbValue > 1) {
-        activeThumbValue--;
-        bigView.textContent = activeThumbValue;
-    } else {
-        prevBtn.removeAttribute("a");
-    }  
+    thumbnailsContainer.scrollLeft -= 200;
 })

@@ -41,12 +41,6 @@ a {
     color: inherit;
 }
 
-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 .header {
     width: 100%;
     height: 100vh;
@@ -92,7 +86,7 @@ img {
         letter-spacing: 1.4px;
         transition: color .2s ease;
         &:hover {
-            color: #ccc;
+            color: $backgroundGrey;
         }
     }
 }
@@ -154,7 +148,6 @@ img {
 
 
 .content {
-    // border: 1px solid darkmagenta;
     max-width: 1112px;
     padding: 0 120px;
     margin: 0 auto 166px;
@@ -195,58 +188,67 @@ img {
 
 .image-viewer {
     width: 56%;
-    border: 1px solid green;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
     &__picture {
-        border: 1px solid violet;
         width: 100%;
-        height: 600px;
+        height: 480px;
+        object-fit: cover;
+        margin: 0 auto;
     }
     &__thumbnails {
-        border: 1px solid red;
         display: flex;
+        flex-wrap: nowrap;
+        overflow-x: hidden;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
         width: 100%;
+        padding: 20px 10px;
     }
     &__thumbnails--item {
-        margin: 20px 0;
-        width: 100px;
+        object-fit: cover;
+        margin: 0 10px;
+        max-width: 100px ;
         height: 78px;
-        list-style: none;
-        display: block;
+        opacity: .7;
+        transition: .3s;
+        &:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
     }
-    &__buttons {
+}
+
+.active {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.buttons-container {
+    position: absolute;
+    top: 440px;
+    right: -40px;
+    display: flex;
+    justify-content: center;
+    &__button {
         font-size: 36px;
         text-align: center;
-        &--next {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            background-color: $headerBlue;
-            color: $mainFont;
-        }
-        &--prev {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            background-color: $headerBlue;
-            color: $mainFont;
-        }
+        width: 40px;
+        height: 40px;
+        background-color: $headerBlue;
+        color: $mainFont;
         &:hover {
             cursor: pointer
         }
     }
-    
 }
 
 .aside-content {
     width: 44%;
     padding: 92px 120px;
-    border:1px solid red;
     &__heading {
         text-transform: uppercase;
         font-size: 48px;
@@ -263,9 +265,8 @@ img {
 }
 
 .bonus-content {
-    //  border: 1px solid darkmagenta;
      max-width: 1336px;
-     padding: 0 200px 0 0;
+     padding-right: 200px;
      margin: 0 auto;
      text-align: left;
      &__heading {
