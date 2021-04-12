@@ -7,7 +7,7 @@ let activeThumbnails = document.getElementsByClassName('active');
 const folderName = "./../assets/img/";
 const fileExtension = ".jpg";
 const maxThumbnailsToView = 10; // powinno byc dynamiczne po przeskanowaniu folderu
-
+ 
 function loadThumbnails(fileName) {
     const imgSelector = document.createElement('img');
     imgSelector.src = folderName + fileName + fileExtension;

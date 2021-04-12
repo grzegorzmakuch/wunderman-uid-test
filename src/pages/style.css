@@ -51,26 +51,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-html {
-  box-sizing: border-box;
-  scroll-behavior: smooth; }
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit; }
-
-body {
-  font-family: 'Lato', sans-serif; }
-
-p {
-  font-family: 'EB Garamond', serif;
-  font-size: 18px; }
-
-a {
-  text-decoration: none;
-  color: inherit; }
-
 .header {
   width: 100%;
   height: 100vh;
@@ -109,7 +89,7 @@ a {
   letter-spacing: 1.4px;
   transition: color .2s ease; }
   .navigation__item:hover {
-    color: #F7F8FA; }
+    color: #d1d4d5; }
 
 .hero {
   height: calc(100vh - 420px);
@@ -203,7 +183,8 @@ a {
     width: 100%;
     height: 480px;
     object-fit: cover;
-    margin: 0 auto; }
+    margin: 0 auto;
+    box-shadow: 4px 4px #d1d4d5; }
   .image-viewer__thumbnails {
     display: flex;
     flex-wrap: nowrap;
@@ -234,14 +215,16 @@ a {
   display: flex;
   justify-content: center; }
   .buttons-container__button {
-    font-size: 36px;
+    font-size: 32px;
+    line-height: 40px;
     text-align: center;
     width: 40px;
     height: 40px;
     background-color: #00427C;
     color: #F7F8FA; }
     .buttons-container__button:hover {
-      cursor: pointer; }
+      cursor: pointer;
+      color: #d1d4d5; }
 
 .aside-content {
   width: 44%;
@@ -302,3 +285,23 @@ a {
     margin-right: 30px;
     border: 2px solid #F7F8FA;
     border-radius: 50%; }
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+body {
+  font-family: 'Lato', sans-serif; }
+
+p {
+  font-family: 'EB Garamond', serif;
+  font-size: 18px; }
+
+a {
+  text-decoration: none;
+  color: inherit; }

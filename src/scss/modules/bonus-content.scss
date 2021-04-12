@@ -1,0 +1,27 @@
+.bonus-content {
+    max-width: 1336px;
+    padding-right: 200px;
+    margin: 0 auto;
+    text-align: left;
+    &__heading {
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 78px;
+        letter-spacing: -2px;
+        color: $headerBlue;
+        margin-bottom: 28px;
+    }
+    &__subheading {
+        text-transform: uppercase;
+        font-size: 20px;
+        color: $neutral;
+        letter-spacing: 1px;
+        margin-bottom: 24px;
+    }
+    &__paragraph {
+        color: $neutral;
+        line-height: 24px;
+        font-size: 18px;
+        padding-bottom: 18px;
+    }
+}
