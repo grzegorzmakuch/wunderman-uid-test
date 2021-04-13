@@ -4,7 +4,7 @@ const bigPicture = document.querySelector('.image-viewer__picture');
 const thumbnailsContainer = document.querySelector('.image-viewer__thumbnails');
 let activeThumbnails = document.getElementsByClassName('active');
 let imagesArray = [];
-let activeImg = 0;
+let activeImg = 1;
 
 const imgFolderName = "./../assets/img/";
 const thumbsFolderName = "./../assets/img/thumbnails/";
@@ -24,7 +24,8 @@ for(let i = 1; i < maxThumbnailsToView; i++) {
 
 let thumbnails = document.getElementsByClassName('image-viewer__thumbnails--item');
 thumbnailsContainer.firstElementChild.classList.add('active');
-bigPicture.src = imagesArray[1];
+bigPicture.src = imagesArray[activeImg];
+
 
 for(let i = 0; i < thumbnails.length; i++) {
     thumbnails[i].addEventListener("click", () => {
@@ -33,24 +34,30 @@ for(let i = 0; i < thumbnails.length; i++) {
         }
         thumbnails[i].classList.add('active');
         bigPicture.src = imagesArray[i + 1];
+        activeImg = i + 1;
     })
 }
 
-function checkActive() {
-    for(let i = 0; i < thumbnails.length; i++) {
-        if(thumbnails[i].classList.contains('active')) {
-            return i;
-        }
-    }
-}
-
 nextBtn.addEventListener("click", () => {
-    active = checkActive();
-    bigPicture.src = imagesArray[active + 2];
-    // active++;
-    // thumbnailsContainer.scrollLeft += 200;
+    if(activeImg < imagesArray.length - 1) {
+        activeImg++;
+        bigPicture.src = imagesArray[activeImg];
+    } else {
+        nextBtn.removeAttribute("href");
+    }
+    if(activeImg > 4) {
+        thumbnailsContainer.scrollLeft += 200;
+    }
 })
 
 prevBtn.addEventListener("click", () => {
-    thumbnailsContainer.scrollLeft -= 200;
+    if(activeImg > 1) {
+        activeImg--;
+        bigPicture.src = imagesArray[activeImg];
+    } else {
+        nextBtn.removeAttribute("href");
+    }
+    if(activeImg < 4) {
+        thumbnailsContainer.scrollLeft -= 200;
+    }
 })
