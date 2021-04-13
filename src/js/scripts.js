@@ -3,15 +3,19 @@ const nextBtn = document.querySelector('.js--btn-next');
 const bigPicture = document.querySelector('.image-viewer__picture');
 const thumbnailsContainer = document.querySelector('.image-viewer__thumbnails');
 let activeThumbnails = document.getElementsByClassName('active');
+let imagesArray = [];
+let activeImg = 0;
 
-const folderName = "./../assets/img/";
+const imgFolderName = "./../assets/img/";
+const thumbsFolderName = "./../assets/img/thumbnails/";
 const fileExtension = ".jpg";
 const maxThumbnailsToView = 10; // powinno byc dynamiczne po przeskanowaniu folderu
  
 function loadThumbnails(fileName) {
     const imgSelector = document.createElement('img');
-    imgSelector.src = folderName + fileName + fileExtension;
+    imgSelector.src = thumbsFolderName + fileName + fileExtension;
     thumbnailsContainer.appendChild(imgSelector).className = "image-viewer__thumbnails--item";
+    imagesArray[fileName] = imgFolderName + fileName + fileExtension;
 }
 
 for(let i = 1; i < maxThumbnailsToView; i++) {
@@ -19,8 +23,8 @@ for(let i = 1; i < maxThumbnailsToView; i++) {
 }
 
 let thumbnails = document.getElementsByClassName('image-viewer__thumbnails--item');
-bigPicture.src = thumbnails[0].src;
 thumbnailsContainer.firstElementChild.classList.add('active');
+bigPicture.src = imagesArray[1];
 
 for(let i = 0; i < thumbnails.length; i++) {
     thumbnails[i].addEventListener("click", () => {
@@ -28,12 +32,23 @@ for(let i = 0; i < thumbnails.length; i++) {
             activeThumbnails[0].classList.remove('active');
         }
         thumbnails[i].classList.add('active');
-        bigPicture.src = thumbnails[i].src;
+        bigPicture.src = imagesArray[i + 1];
     })
 }
 
+function checkActive() {
+    for(let i = 0; i < thumbnails.length; i++) {
+        if(thumbnails[i].classList.contains('active')) {
+            return i;
+        }
+    }
+}
+
 nextBtn.addEventListener("click", () => {
-    thumbnailsContainer.scrollLeft += 200;
+    active = checkActive();
+    bigPicture.src = imagesArray[active + 2];
+    // active++;
+    // thumbnailsContainer.scrollLeft += 200;
 })
 
 prevBtn.addEventListener("click", () => {

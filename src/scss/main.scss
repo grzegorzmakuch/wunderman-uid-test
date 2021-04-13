@@ -4,34 +4,10 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
 
 @import "_variables";  
+@import "./modules/base";
 
-@import "./modules/header.scss";
-@import "./modules/content.scss";
-@import "./modules/gallery.scss";
-@import "./modules/bonus-content.scss";
-@import "./modules/footer.scss";
-
-html {
-    box-sizing: border-box; 
-    scroll-behavior: smooth;
-}
-
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
-}
-
-body {
-    font-family: 'Lato', sans-serif;
-}
-
-p {
-    font-family: 'EB Garamond', serif;
-    font-size: 18px;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
+@import "./modules/header";
+@import "./modules/content";
+@import "./modules/gallery";
+@import "./modules/bonus-content";
+@import "./modules/_footer";

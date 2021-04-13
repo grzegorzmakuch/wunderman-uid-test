@@ -50,6 +50,7 @@
 .active {
     transform: scale(1.1);
     opacity: 1;
+    border: 2px solid $lightShadow;
 }
 
 .buttons-container {

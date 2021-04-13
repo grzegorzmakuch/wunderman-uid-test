@@ -1,0 +1,36 @@
+.footer {
+    background-color: $neutralDark;
+    color: $mainFont;
+    &__container {
+        margin: 0 auto;
+        padding: 24px 0;
+        max-width: 1280px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
+
+.footer-logo {
+    width: 60px;
+    height: 60px;  
+    line-height: 50px;
+    text-align: center;
+    font-size: 36px;
+    margin-right: auto;
+    border: 2px solid $mainFont;
+    border-radius: 50%;
+    transition: all .3s;
+    &:hover {
+        color: $headerBlue;
+        font-weight: 700;
+        background-color: $lightShadow;
+        cursor: pointer;
+
+    }
+}
+
+.copyright {
+    margin-left: 22px;
+    color: $lightShadow;
+}
