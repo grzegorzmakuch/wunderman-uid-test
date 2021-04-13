@@ -3,7 +3,7 @@
     background-color: $backgroundGrey;
     &__container {
         margin: 0 auto;
-        max-width: 1336px;
+        max-width: 1280px;
         display: flex;
         align-items: flex-start;
         justify-content: center;
@@ -31,7 +31,7 @@
         align-items: center;
         justify-content: space-between;
         width: 100%;
-        padding: 20px 10px;
+        padding: 20px 0;
     }
     &__thumbnails--item {
         object-fit: cover;

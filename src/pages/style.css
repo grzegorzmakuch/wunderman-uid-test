@@ -187,7 +187,7 @@ a {
   background-color: #F7F8FA; }
   .gallery__container {
     margin: 0 auto;
-    max-width: 1336px;
+    max-width: 1280px;
     display: flex;
     align-items: flex-start;
     justify-content: center; }
@@ -212,7 +212,7 @@ a {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 20px 10px; }
+    padding: 20px 0; }
   .image-viewer__thumbnails--item {
     object-fit: cover;
     margin: 0 10px;
@@ -263,7 +263,7 @@ a {
     line-height: 24px; }
 
 .bonus-content {
-  max-width: 1336px;
+  max-width: 1280px;
   padding-right: 200px;
   margin: 0 auto;
   text-align: left; }
@@ -283,7 +283,6 @@ a {
   .bonus-content__paragraph {
     color: #000000;
     line-height: 24px;
-    font-size: 18px;
     padding-bottom: 18px; }
 
 .footer {

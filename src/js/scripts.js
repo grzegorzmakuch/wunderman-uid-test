@@ -26,13 +26,16 @@ let thumbnails = document.getElementsByClassName('image-viewer__thumbnails--item
 thumbnailsContainer.firstElementChild.classList.add('active');
 bigPicture.src = imagesArray[activeImg];
 
+function toggleActive(val) {
+    if(activeThumbnails.length > 0) {
+        activeThumbnails[0].classList.remove('active');
+    }
+    thumbnails[val].classList.add('active');
+}
 
 for(let i = 0; i < thumbnails.length; i++) {
     thumbnails[i].addEventListener("click", () => {
-        if(activeThumbnails.length > 0) {
-            activeThumbnails[0].classList.remove('active');
-        }
-        thumbnails[i].classList.add('active');
+        toggleActive(i);
         bigPicture.src = imagesArray[i + 1];
         activeImg = i + 1;
     })
@@ -42,6 +45,7 @@ nextBtn.addEventListener("click", () => {
     if(activeImg < imagesArray.length - 1) {
         activeImg++;
         bigPicture.src = imagesArray[activeImg];
+        toggleActive(activeImg - 1);
     } else {
         nextBtn.removeAttribute("href");
     }
@@ -54,6 +58,7 @@ prevBtn.addEventListener("click", () => {
     if(activeImg > 1) {
         activeImg--;
         bigPicture.src = imagesArray[activeImg];
+        toggleActive(activeImg - 1);
     } else {
         nextBtn.removeAttribute("href");
     }
