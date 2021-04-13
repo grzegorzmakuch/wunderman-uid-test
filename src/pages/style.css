@@ -133,6 +133,7 @@ a {
     margin-left: -10px; }
   .hero__paragraph {
     width: 800px;
+    padding: 0 40px;
     line-height: 24px;
     margin-bottom: 50px; }
 
@@ -182,10 +183,12 @@ a {
     line-height: 24px;
     font-size: 16px; }
 
-.gallery {
+.gallery,
+.gallery2 {
   margin-bottom: 120px;
   background-color: #F7F8FA; }
-  .gallery__container {
+  .gallery__container,
+  .gallery2__container {
     margin: 0 auto;
     max-width: 1280px;
     display: flex;
@@ -205,7 +208,7 @@ a {
     object-fit: cover;
     margin: 0 auto;
     box-shadow: 4px 4px #d1d4d5; }
-  .image-viewer__thumbnails {
+  .image-viewer__thumbnails, .image-viewer__thumbnails2 {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: hidden;
@@ -213,54 +216,69 @@ a {
     justify-content: space-between;
     width: 100%;
     padding: 20px 0; }
-  .image-viewer__thumbnails--item {
-    object-fit: cover;
-    margin: 0 10px;
-    max-width: 100px;
-    height: 78px;
-    opacity: .7;
-    transition: .3s; }
-    .image-viewer__thumbnails--item:hover {
-      opacity: 1;
-      cursor: pointer; }
+    .image-viewer__thumbnails--item, .image-viewer__thumbnails2--item {
+      object-fit: cover;
+      margin: 0 10px;
+      max-width: 100px;
+      height: 78px;
+      opacity: .7;
+      transition: .3s;
+      box-shadow: 2px 2px #d1d4d5; }
+      .image-viewer__thumbnails--item:hover, .image-viewer__thumbnails2--item:hover {
+        opacity: 1;
+        cursor: pointer; }
 
 .active {
   transform: scale(1.1);
   opacity: 1;
   border: 2px solid #d1d4d5; }
 
-.buttons-container {
+.buttons-container__right {
   position: absolute;
   top: 440px;
   right: -40px;
   display: flex;
   justify-content: center; }
-  .buttons-container__button {
-    font-size: 32px;
-    line-height: 40px;
-    text-align: center;
-    width: 40px;
-    height: 40px;
-    background-color: #00427C;
-    color: #F7F8FA; }
-    .buttons-container__button:hover {
-      cursor: pointer;
-      color: #d1d4d5; }
 
-.aside-content {
+.buttons-container__left {
+  position: absolute;
+  top: 440px;
+  left: -40px;
+  display: flex;
+  justify-content: center; }
+
+.buttons-container__button {
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  background-color: #00427C;
+  color: #F7F8FA; }
+  .buttons-container__button:hover {
+    cursor: pointer;
+    color: #d1d4d5; }
+
+.aside-content__right {
   width: 44%;
   padding: 92px 120px; }
-  .aside-content__heading {
-    text-transform: uppercase;
-    font-size: 48px;
-    font-weight: 900;
-    letter-spacing: -2px;
-    color: #00427C;
-    margin-bottom: 28px; }
-  .aside-content__paragraph {
-    width: 320px;
-    color: #000000;
-    line-height: 24px; }
+
+.aside-content__left {
+  width: 44%;
+  padding: 92px 0; }
+
+.aside-content__heading {
+  text-transform: uppercase;
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  color: #00427C;
+  margin-bottom: 28px; }
+
+.aside-content__paragraph {
+  width: 320px;
+  color: #000000;
+  line-height: 24px; }
 
 .bonus-content {
   max-width: 1280px;
@@ -315,3 +333,46 @@ a {
 .copyright {
   margin-left: 22px;
   color: #d1d4d5; }
+
+@media screen and (max-width: 640px) {
+  .navigation {
+    display: none; }
+  .content__heading,
+  .aside-content__heading,
+  .bonus-content__heading {
+    font-size: 48px; }
+  .content {
+    padding: 0 20px; }
+  .gallery__container,
+  .gallery2__container {
+    flex-direction: column; }
+  .gallery2__container {
+    flex-direction: column-reverse; }
+  .buttons-container__right {
+    display: none; }
+  .image-viewer {
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end; }
+  .aside-content__right {
+    padding: 92px 20px; }
+  .bonus-content {
+    padding: 0 20px; }
+  .footer__container {
+    flex-direction: column; }
+  .footer-logo {
+    margin: 0 auto 20px; }
+  .footer .navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .footer .navigation__item,
+  .copyright {
+    margin: 10px 0; }
+  .copyright {
+    font-size: 10px;
+    margin-top: 20px; } }

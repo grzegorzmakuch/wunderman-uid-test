@@ -115,6 +115,7 @@ a {
     }
     &__paragraph {
         width: 800px;
+        padding: 0 40px;
         line-height: 24px;
         margin-bottom: 50px;
     }
@@ -175,7 +176,8 @@ a {
 }
 
 // GALLERY
-.gallery {
+.gallery,
+.gallery2 {
     margin-bottom: 120px;
     background-color: $backgroundGrey;
     &__container {
@@ -201,7 +203,8 @@ a {
         margin: 0 auto;
         box-shadow: 4px 4px $lightShadow;
     }
-    &__thumbnails {
+    &__thumbnails,
+    &__thumbnails2 {
         display: flex;
         flex-wrap: nowrap;
         overflow-x: hidden;
@@ -209,17 +212,18 @@ a {
         justify-content: space-between;
         width: 100%;
         padding: 20px 0;
-    }
-    &__thumbnails--item {
-        object-fit: cover;
-        margin: 0 10px;
-        max-width: 100px ;
-        height: 78px;
-        opacity: .7;
-        transition: .3s;
-        &:hover {
-            opacity: 1;
-            cursor: pointer;
+        &--item {
+            object-fit: cover;
+            margin: 0 10px;
+            max-width: 100px ;
+            height: 78px;
+            opacity: .7;
+            transition: .3s;
+            box-shadow: 2px 2px $lightShadow;
+            &:hover {
+                opacity: 1;
+                cursor: pointer;
+            }
         }
     }
 }
@@ -231,11 +235,20 @@ a {
 }
 
 .buttons-container {
-    position: absolute;
-    top: 440px;
-    right: -40px;
-    display: flex;
-    justify-content: center;
+    &__right {
+        position: absolute;
+        top: 440px;
+        right: -40px;
+        display: flex;
+        justify-content: center;
+    }
+    &__left {
+        position: absolute;
+        top: 440px;
+        left: -40px;
+        display: flex;
+        justify-content: center;
+    }
     &__button {
         font-size: 32px;
         line-height: 40px;
@@ -252,8 +265,14 @@ a {
 }
 
 .aside-content {
-    width: 44%;
-    padding: 92px 120px;
+    &__right {
+        width: 44%;
+        padding: 92px 120px;
+    }
+    &__left {
+        width: 44%;
+        padding: 92px 0;
+    }
     &__heading {
         text-transform: uppercase;
         font-size: 48px;
@@ -334,4 +353,79 @@ a {
 .copyright {
     margin-left: 22px;
     color: $lightShadow;
+}
+
+@media screen and (max-width: 640px) {
+    .navigation {
+        display: none;
+    }
+
+    .content__heading,
+    .aside-content__heading,
+    .bonus-content__heading {
+        font-size: 48px;
+    }
+
+    .content {
+        padding: 0 20px;
+    }
+
+    .gallery,
+    .gallery2 {
+        &__container {
+            flex-direction: column;
+        }
+    }
+
+    .gallery2 {
+        &__container {
+            flex-direction: column-reverse;
+        }
+    }
+
+    .buttons-container__right {
+        display: none;
+    }
+
+    .image-viewer {
+        width: 100%;
+        padding: 0 20px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        }
+
+    .aside-content__right {
+        padding: 92px 20px;
+    }
+
+    .bonus-content{
+        padding: 0 20px;
+    }
+
+    .footer__container {
+        flex-direction: column;
+    }
+
+    .footer-logo {
+        margin: 0 auto 20px;
+    }
+
+    .footer .navigation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .navigation__item,
+    .copyright {
+        margin: 10px 0;
+    }
+
+    .copyright {
+        font-size: 10px;
+        margin-top: 20px;
+    }
 }
