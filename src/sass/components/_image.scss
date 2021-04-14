@@ -1,0 +1,30 @@
+img {
+    // display: block;
+    background-size: cover;
+    width: 100%;
+    &.image-big {
+        box-shadow: 4px 4px $greyCreme;
+    }
+
+    &.thumbnails--item {
+        max-width: 100px;
+        height: 78px;
+        margin: 0 10px;
+        opacity: .7;
+        transition: .3s;
+        box-shadow: 2px 2px $greyCreme;
+        
+        &:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
+        
+        &:first-child {
+            margin-left: 0;
+        }
+        
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

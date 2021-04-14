@@ -4,13 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "npx node-sass ./src/scss/main.scss ./src/pages/style.css -w",
+    "sass": "npx node-sass ./src/sass/main.scss ./src/css/main.css -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Grzegorz Makuch",
   "license": "ISC",
   "dependencies": {
-    "node-sass": "^5.0.0",
-    "reset-css": "^5.0.1"
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "node-sass": "^5.0.0"
   }
 }

@@ -1,0 +1,39 @@
+#header {
+    background-image: linear-gradient(rgba(0, 66, 123, .8),rgba(0, 66, 123, 0)); 
+    min-height: 100px;
+
+    > .container {
+        width: $bigWidth;
+        line-height: 100px;
+        display: flex;
+        justify-content: space-between;
+
+        > .logo {
+            color: $almostWhite;
+            font-size: $headerSmall;
+            letter-spacing: 4px;
+            
+            > .icon {
+                display: inline-block;
+                width: 48px;
+                height: 48px;
+                line-height: 44px;
+                text-align: center;
+                border: 2px solid $almostWhite;
+                border-radius: 50%;
+                font-size: 28px;
+                margin-right: 20px;
+                font-weight: 700;
+            }
+        }
+
+        > nav {
+            > a {
+                color: $almostWhite;
+                display: inline-block;
+                padding-left: 28px;
+                font-size: 20px;
+            }
+        }
+    }
+}

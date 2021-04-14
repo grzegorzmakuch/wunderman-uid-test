@@ -1,0 +1,9 @@
+.cursor {
+    width: 40px;
+    height: 40px;
+    display: block;
+    background-color: $headerBlue;
+    &:hover {
+        box-shadow: 2px 2px $greyCreme;
+    }
+}

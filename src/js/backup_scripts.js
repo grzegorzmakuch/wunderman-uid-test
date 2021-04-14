@@ -1,4 +1,3 @@
-const darkMode = document.querySelector('.dark-mode--js');
 const prevBtn = document.querySelector('.js--btn-prev');
 const nextBtn = document.querySelector('.js--btn-next');
 const bigPicture = document.querySelector('.image-viewer__picture');

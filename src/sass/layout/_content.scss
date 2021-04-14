@@ -1,0 +1,27 @@
+#content,
+#bonus-content {
+    margin-bottom: $sectionMargin;
+
+    > .container {
+        > h2 {
+            font-size: $headerBig;
+        }
+
+        > h3 {
+            font-size: $headerSmall;
+            font-weight: 400;
+            color: $neutralDark;
+        }
+    }
+}
+
+#content > .container {
+    max-width: $miniWidth;
+    text-align: center;
+}
+
+#bonus-content > .container {
+    max-width: $wideWidth;
+    text-align: left;
+    padding: 0 200px 0 20px;
+}

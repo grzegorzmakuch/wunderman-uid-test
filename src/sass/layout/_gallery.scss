@@ -1,0 +1,40 @@
+.gallery {
+    background-color: $almostWhite;
+    margin-bottom: $sectionMargin;
+ 
+    > .container {
+        max-width: $wideWidth;
+        display: flex;
+        align-items: flex-start;
+
+        > .img-viewer {
+            width: 58%;
+
+            > .thumbnails {
+                display: flex;
+                justify-content: space-between;
+                padding: 20px 0;
+            }
+        }
+
+        > aside {
+            width: 42%;
+            padding: 86px 126px;
+
+            > h2 {
+                font-size: $headerUpperMedium;
+            }
+        }
+    }
+
+    // &__first {
+
+    // }
+
+    &__second {
+        > .container > aside {
+            padding-left: 20px;
+            padding-right: 172px;
+        }
+    }
+}

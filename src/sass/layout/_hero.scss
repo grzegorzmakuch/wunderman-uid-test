@@ -1,0 +1,41 @@
+#hero {
+    height: 100vh;
+    background-image: url('./../assets/main-img.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: $almostWhite;
+    margin-bottom: $sectionMargin;
+    
+    > .container {
+        position: relative;
+        padding: 160px 0;
+        width: $smallWidht;
+        height: calc(100vh - 100px);
+
+        >h2 {
+            font-size: $headerMedium;
+            font-weight: 400;
+            color: $almostWhite;
+        }
+
+        >h1 {
+            font-size: $headerHuge;
+            letter-spacing: -10px;
+            color: $almostWhite;
+        }
+
+        >p {
+            font-size: 17px;
+            width: 70%;
+            padding: 40px 0;
+            text-align: left;
+        }
+        > .see-more {
+            text-align: center;
+            position: absolute;
+            bottom: 5%;
+            left: 47%;
+
+        }
+    }
+}
