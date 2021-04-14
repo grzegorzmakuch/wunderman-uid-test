@@ -1,0 +1,23 @@
+.arrow {
+    bottom: 118px;
+    right: -$imgNavButton;
+    position: absolute;
+    display: flex;
+    &__item {
+        width: $imgNavButton;
+        height: $imgNavButton;
+        line-height: $imgNavButton;
+        text-align: center;
+        display: block;
+        color: $almostWhite;
+        background-color: $headerBlue;
+        &:hover {
+            box-shadow: 2px 2px $greyCreme;
+            cursor: pointer;
+        }
+    }
+}
+
+.gallery__second .arrow {
+    left: -$imgNavButton;
+}

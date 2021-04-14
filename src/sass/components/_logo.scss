@@ -1,0 +1,19 @@
+.logo {
+  color: $almostWhite;
+  display: flex;
+  align-items: center;
+  &__icon {
+    width: $headerIcon;
+    height: $headerIcon;
+    line-height: 44px;
+    text-align: center;
+    border: 2px solid $almostWhite;
+    border-radius: 50%;
+    font-size: 28px;
+  }
+  &__brand {
+      margin-left: 20px;
+      letter-spacing: 8px;
+      font-size: $headerSmall;
+  }
+}

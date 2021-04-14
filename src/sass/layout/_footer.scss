@@ -1,0 +1,24 @@
+#footer {
+    padding: 32px 0;
+    background-color: $neutralDark;
+
+    > .container {
+        width: $bigWidth;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        
+        > .logo {
+            margin-right: auto;
+            &__icon {
+                color: red;
+            }
+        }
+
+        > .copyright {
+            margin-left: 28px;
+            color: $greyCreme;
+            font-size: 14px;
+        }
+    }
+}

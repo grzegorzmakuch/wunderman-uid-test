@@ -9,6 +9,7 @@
 
         > .img-viewer {
             width: 58%;
+            position: relative;
 
             > .thumbnails {
                 display: flex;
@@ -26,10 +27,6 @@
             }
         }
     }
-
-    // &__first {
-
-    // }
 
     &__second {
         > .container > aside {
