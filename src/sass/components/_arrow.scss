@@ -10,9 +10,10 @@
         text-align: center;
         display: block;
         color: $almostWhite;
-        background-color: $headerBlue;
+        background-color: $button;
         &:hover {
             box-shadow: 2px 2px $greyCreme;
+            background-color: $headerBlue;
             cursor: pointer;
         }
     }

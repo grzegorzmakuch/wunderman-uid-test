@@ -10,7 +10,6 @@
   "author": "Grzegorz Makuch",
   "license": "ISC",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.3",
     "node-sass": "^5.0.0"
   }
 }

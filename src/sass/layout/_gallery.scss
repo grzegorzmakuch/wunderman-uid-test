@@ -12,6 +12,7 @@
             position: relative;
 
             > .thumbnails {
+                overflow: hidden;
                 display: flex;
                 justify-content: space-between;
                 padding: 20px 0;

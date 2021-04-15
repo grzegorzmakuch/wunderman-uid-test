@@ -2,6 +2,7 @@
   color: $almostWhite;
   display: flex;
   align-items: center;
+  
   &__icon {
     width: $headerIcon;
     height: $headerIcon;
@@ -10,7 +11,15 @@
     border: 2px solid $almostWhite;
     border-radius: 50%;
     font-size: 28px;
+    
+    &--footer-mod {
+      width: 64px;
+      height: 64px;
+      line-height: 58px;
+      font-size: 40px;
+    }
   }
+  
   &__brand {
       margin-left: 20px;
       letter-spacing: 8px;

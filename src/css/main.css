@@ -81,7 +81,7 @@ p {
 h1, h2, h3 {
   font-weight: 900;
   text-transform: uppercase;
-  color: #00427C;
+  color: #004777;
   margin: 0 0 20px; }
 
 .button {
@@ -100,15 +100,16 @@ h1, h2, h3 {
   border: 1px solid red; }
 
 img {
-  background-size: cover;
+  object-fit: cover;
   width: 100%; }
   img.image-big {
-    box-shadow: 4px 4px #d1d4d5; }
+    box-shadow: 4px 4px #d1d4d5;
+    height: 600px; }
   img.thumbnails--item {
     max-width: 100px;
     height: 78px;
     margin: 0 10px;
-    opacity: .7;
+    opacity: .6;
     transition: .3s;
     box-shadow: 2px 2px #d1d4d5; }
     img.thumbnails--item:hover {
@@ -118,6 +119,10 @@ img {
       margin-left: 0; }
     img.thumbnails--item:last-child {
       margin-right: 0; }
+  img.current {
+    transform: scale(1.2);
+    opacity: 1;
+    border: 2px solid #aaa; }
 
 .arrow {
   bottom: 118px;
@@ -131,9 +136,10 @@ img {
     text-align: center;
     display: block;
     color: #F7F8FA;
-    background-color: #00427C; }
+    background-color: #003355; }
     .arrow__item:hover {
       box-shadow: 2px 2px #d1d4d5;
+      background-color: #004777;
       cursor: pointer; }
 
 .gallery__second .arrow {
@@ -151,6 +157,11 @@ img {
     border: 2px solid #F7F8FA;
     border-radius: 50%;
     font-size: 28px; }
+    .logo__icon--footer-mod {
+      width: 64px;
+      height: 64px;
+      line-height: 58px;
+      font-size: 40px; }
   .logo__brand {
     margin-left: 20px;
     letter-spacing: 8px;
@@ -161,7 +172,8 @@ img {
   color: #F7F8FA;
   display: inline-block;
   padding-left: 28px;
-  font-size: 20px; }
+  font-size: 18px;
+  letter-spacing: 2px; }
   #hero nav > a:hover,
   #footer nav > a:hover {
     color: #d1d4d5; }
@@ -239,6 +251,7 @@ img {
       width: 58%;
       position: relative; }
       .gallery > .container > .img-viewer > .thumbnails {
+        overflow: hidden;
         display: flex;
         justify-content: space-between;
         padding: 20px 0; }
@@ -252,7 +265,7 @@ img {
     padding-right: 172px; }
 
 #footer {
-  padding: 32px 0;
+  padding: 26px 0;
   background-color: #1a262f; }
   #footer > .container {
     width: 1336px;
@@ -261,9 +274,7 @@ img {
     justify-content: flex-end; }
     #footer > .container > .logo {
       margin-right: auto; }
-      #footer > .container > .logo__icon {
-        color: red; }
     #footer > .container > .copyright {
       margin-left: 28px;
-      color: #d1d4d5;
+      color: #aaa;
       font-size: 14px; }

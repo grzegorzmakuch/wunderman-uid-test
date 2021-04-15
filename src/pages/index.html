@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./../css/main.css" />
+    <link rel="stylesheet" href="./../css/font-awesome.min.css" />
     <title>Test UID - Grzegorz Makuch</title>
   </head>
   <body>
@@ -39,10 +40,14 @@
           dolorem alias molestias obcaecati ullam blanditiis similique?
         </p>
 
-        <button class="button">CALL TO ACTION</button>
-        <a class="see-more" href="#content"
-          >SEE MORE<i class="fas fa-long-arrow-alt-down"></i
-        ></a>
+        <button class="button">
+            CALL TO ACTION
+            <i class="fa fa-long-arrow-right"></i>
+        </button>
+        <a class="see-more" href="#content">
+          SEE MORE<br />
+          <i class="fa fa-long-arrow-down"></i>
+        </a>
       </div>
     </section>
 
@@ -71,28 +76,15 @@
     <section class="gallery gallery__first">
       <div class="container">
         <div class="img-viewer">
-          <img class="image-big" src="./../assets/img/1.jpg" />
-          <div class="thumbnails">
-            <img
-              class="thumbnails--item"
-              src="./../assets/img/thumbnails/1.jpg"
-            />
-            <img
-              class="thumbnails--item"
-              src="./../assets/img/thumbnails/2.jpg"
-            />
-            <img
-              class="thumbnails--item"
-              src="./../assets/img/thumbnails/3.jpg"
-            />
-            <img
-              class="thumbnails--item"
-              src="./../assets/img/thumbnails/4.jpg"
-            />
-          </div>
+          <img class="image-big" src="#" />
+          <div class="thumbnails"></div>
           <div class="arrow">
-            <a class="arrow__item">P</a>
-            <a class="arrow__item">N</a>
+            <a class="arrow__item js--btn-prev">
+              <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+            </a>
+            <a class="arrow__item js--btn-next">
+              <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
         <aside>
@@ -189,28 +181,15 @@
           </p>
         </aside>
         <div class="img-viewer">
-          <img class="image-big" src="./../assets/img/1.jpg" />
-          <div class="thumbnails">
-            <img
-              class="thumbnails--item"
-              src="./../assets/img/thumbnails/1.jpg"
-            />
-            <img
-              class="thumbnails--item"
-              src="./../assets/img/thumbnails/2.jpg"
-            />
-            <img
-              class="thumbnails--item"
-              src="./../assets/img/thumbnails/3.jpg"
-            />
-            <img
-              class="thumbnails--item"
-              src="./../assets/img/thumbnails/4.jpg"
-            />
-          </div>
+          <img class="image-big" src="" />
+          <div class="thumbnails"></div>
           <div class="arrow">
-            <a class="arrow__item">P</a>
-            <a class="arrow__item">N</a>
+            <a class="arrow__item js--btn-prev">
+              <i class="fa fa-long-arrow-left"></i>
+            </a>
+            <a class="arrow__item js--btn-next">
+              <i class="fa fa-long-arrow-right"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -220,7 +199,7 @@
     <footer id="footer">
       <div class="container">
         <div class="logo">
-          <div class="logo__icon">A</div>
+          <div class="logo__icon logo__icon--footer-mod">A</div>
         </div>
         <nav>
           <a href="#">About Us</a>

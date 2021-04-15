@@ -1,16 +1,18 @@
 img {
     // display: block;
-    background-size: cover;
+    // background-size: cover;
+    object-fit: cover;
     width: 100%;
     &.image-big {
         box-shadow: 4px 4px $greyCreme;
+        height: 600px;
     }
 
     &.thumbnails--item {
         max-width: 100px;
         height: 78px;
         margin: 0 10px;
-        opacity: .7;
+        opacity: .6;
         transition: .3s;
         box-shadow: 2px 2px $greyCreme;
         
@@ -26,5 +28,11 @@ img {
         &:last-child {
             margin-right: 0;
         }
+    }
+
+    &.current {
+        transform: scale(1.2);
+        opacity: 1;
+        border: 2px solid $trueGrey;
     }
 }

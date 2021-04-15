@@ -1,71 +1,78 @@
-const darkMode = document.querySelector('.dark-mode--js');
-const prevBtn = document.querySelector('.js--btn-prev');
-const nextBtn = document.querySelector('.js--btn-next');
-const bigPicture = document.querySelector('.image-viewer__picture');
-const thumbnailsContainer = document.querySelector('.image-viewer__thumbnails');
-const thumbnailsContainer2 = document.querySelector('.image-viewer__thumbnails2');
-let activeThumbnails = document.getElementsByClassName('active');
-let imagesArray = [];
-let activeImg = 1;
-
 const imgFolderName = "./../assets/img/";
 const thumbsFolderName = "./../assets/img/thumbnails/";
 const fileExtension = ".jpg";
-const maxThumbnailsToView = 10; // powinno byc dynamiczne po przeskanowaniu folderu
 
-function loadThumbnails(galleryNr, fileName) {
-    const imgSelector = document.createElement('img');
-    imgSelector.src = thumbsFolderName + fileName + fileExtension;
-    galleryNr.appendChild(imgSelector).className = galleryNr.className + "--item";
-    imagesArray[fileName] = imgFolderName + fileName + fileExtension;
+const gallery = document.querySelectorAll('.gallery');
+const maxElementsToLoad = 9; // dynamic value after 
+
+
+function setCurrentImage(galleryNr, val) {
+    const imageBig = galleryNr.querySelector('.image-big');
+    imageBig.src = imgFolderName + val + fileExtension;
 }
 
-for(let i = 1; i < maxThumbnailsToView; i++) {
-    loadThumbnails(thumbnailsContainer, i);
-    loadThumbnails(thumbnailsContainer2, i);
+function toggleActive(galleryNr, container, val) {
+    let activeMinis = galleryNr.getElementsByClassName('current');
+    if(activeMinis.length > 0) {
+        activeMinis[0].classList.remove('current');
+    }
+    container[val].classList.add('current');
 }
 
-let thumbnails = document.getElementsByClassName('image-viewer__thumbnails--item');
-thumbnailsContainer.firstElementChild.classList.add('active');
-bigPicture.src = imagesArray[activeImg];
+function handleView(galleryNr) {
+    const thumbnails = galleryNr.querySelector('.thumbnails');
+    const prevBtn = galleryNr.querySelector('.js--btn-prev');
+    const nextBtn = galleryNr.querySelector('.js--btn-next');
+    let currentImageNr = 1;
+        
+    // load all files from img folder
+    for(let i = 0; i < maxElementsToLoad; i++) {
+        const imageElement = document.createElement('img');
+        imageElement.src = thumbsFolderName + parseInt(i + 1) + fileExtension;
+        thumbnails.appendChild(imageElement).className = 'thumbnails--item';
+    }
 
-for(let i = 0; i < thumbnails.length; i++) {
-    thumbnails[i].addEventListener("click", () => {
-        toggleActive(i);
-        bigPicture.src = imagesArray[i + 1];
-        activeImg = i + 1;
+    // set active class
+    thumbnails.firstElementChild.classList.add('current');
+    let minis = galleryNr.getElementsByClassName('thumbnails--item');
+    let activeThumbnails = document.getElementsByClassName('current');
+
+    // load big view from thumbnails
+    for(let i = 0; i < minis.length; i++) {
+        minis[i].addEventListener("click", () => {
+            toggleActive(galleryNr, minis, i);
+            currentImageNr = i + 1;
+            setCurrentImage(galleryNr, currentImageNr);
+        })
+    }
+
+    // arrow buttons handling
+    nextBtn.addEventListener("click", () => {
+        if(currentImageNr < minis.length) {
+            currentImageNr++;
+            setCurrentImage(galleryNr, currentImageNr);
+            toggleActive(galleryNr, minis, currentImageNr - 1);
+        } else {
+            nextBtn.classList.tog   
+        }
+        if(currentImageNr > 4) {
+            thumbnails.scrollLeft += 200;
+        }
+    })
+
+    prevBtn.addEventListener("click", () => {
+        if(currentImageNr > 1) {
+            currentImageNr--;
+            setCurrentImage(galleryNr, currentImageNr);
+            toggleActive(galleryNr, minis, currentImageNr - 1);
+        } 
+        if(currentImageNr < 4) {
+            thumbnails.scrollLeft -= 200;
+        }
     })
 }
 
-function toggleActive(val) {
-    if(activeThumbnails.length > 0) {
-        activeThumbnails[0].classList.remove('active');
-    }
-    thumbnails[val].classList.add('active');
+for(let i = 0; i < gallery.length; i++) {
+    handleView(gallery[i]);
+    setCurrentImage(gallery[i], 1);
 }
-
-nextBtn.addEventListener("click", () => {
-    if(activeImg < imagesArray.length - 1) {
-        activeImg++;
-        bigPicture.src = imagesArray[activeImg];
-        toggleActive(activeImg - 1);
-    } else {
-        nextBtn.removeAttribute("href");
-    }
-    if(activeImg > 4) {
-        thumbnailsContainer.scrollLeft += 200;
-    }
-})
-
-prevBtn.addEventListener("click", () => {
-    if(activeImg > 1) {
-        activeImg--;
-        bigPicture.src = imagesArray[activeImg];
-        toggleActive(activeImg - 1);
-    } else {
-        nextBtn.removeAttribute("href");
-    }
-    if(activeImg < 4) {
-        thumbnailsContainer.scrollLeft -= 200;
-    }
-})

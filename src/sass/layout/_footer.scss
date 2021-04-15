@@ -1,5 +1,5 @@
 #footer {
-    padding: 32px 0;
+    padding: 26px 0;
     background-color: $neutralDark;
 
     > .container {
@@ -10,14 +10,11 @@
         
         > .logo {
             margin-right: auto;
-            &__icon {
-                color: red;
-            }
         }
 
         > .copyright {
             margin-left: 28px;
-            color: $greyCreme;
+            color: $trueGrey;
             font-size: 14px;
         }
     }
