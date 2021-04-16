@@ -9,7 +9,7 @@
     
     > .container {
         position: relative;
-        padding: 160px 0;
+        padding: 160px 10px;
         width: $smallWidht;
         height: calc(100vh - 100px);
 
@@ -34,8 +34,20 @@
         > .see-more {
             text-align: center;
             position: absolute;
-            bottom: 5%;
+            bottom: 3%;
             left: 47%;
+            line-height: 24px;
+        }
+    }
+}
+
+@media screen and (max-width: 770px) {
+    #hero {
+        > .container {
+            > h1 {
+                font-size: $headerBig;
+                letter-spacing: -2px;
+            }
         }
     }
 }

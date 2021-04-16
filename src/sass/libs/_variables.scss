@@ -1,29 +1,30 @@
-$almostWhite: #F7F8FA;
-$headerBlue: #004777;
-$neutralDark: #1a262f;
-$greyCreme: #d1d4d5;
-$trueGrey: #aaa;
+// COLORS
+$almostWhite:       #F7F8FA;
+$headerBlue:        #004777;
+$neutralDark:       #1a262f;
+$greyCreme:         #d1d4d5;
+$trueGrey:          #aaa;
+$button:            #003355;
 
-$button: #003355;
+// RANGES
+$headerHeight:      100px;
+$sectionMargin:     116px;
+$miniWidth:         960px;
+$smallWidht:        1100px;
+$medWidth:          1280px;
+$bigWidth:          1336px;
+$wideWidth:         1376px;
 
-$wideWidth: 1376px;
-$bigWidth: 1336px;
-$medWidth: 1280px;
-$smallWidht: 1100px;
-$miniWidth: 960px;
-
-$headerHeight: 100px;
-
-
-$normalFont: 16px;
-$headerSmall: 20px;
-$headerMedium: 30px;
+// FONTS
+$normalFont:        16px;
+$headerSmall:       20px;
+$headerMedium:      30px;
 $headerUpperMedium: 48px;
-$headerBig: 76px;
-$headerHuge: 178px;
+$headerBig:         76px;
+$headerHuge:        178px;
 
-$sectionMargin: 116px;
+// NAV BUTTONS
+$imgNavButton:      40px;
+$headerIcon:        48px;
+$footerIcon:        60px;
 
-$imgNavButton: 40px;
-$headerIcon: 48px;
-$footerIcon: 60px;

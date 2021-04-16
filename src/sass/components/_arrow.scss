@@ -22,3 +22,13 @@
 .gallery__second .arrow {
     left: -$imgNavButton;
 }
+
+@media screen and (max-width: 770px) {
+    .arrow {
+        right: 0;
+    }
+
+    .gallery__second .arrow {
+        left: 0;
+    }
+}

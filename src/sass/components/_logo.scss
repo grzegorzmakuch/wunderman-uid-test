@@ -17,6 +17,10 @@
       height: 64px;
       line-height: 58px;
       font-size: 40px;
+      &:hover {
+        color: $trueGrey;
+        border-color: $trueGrey; 
+      }
     }
   }
   

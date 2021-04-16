@@ -19,3 +19,21 @@
         }
     }
 }
+
+@media screen and (max-width: 770px) {
+    #footer {
+        > .container {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            > .logo {
+                margin: 0 auto 26px;
+            }
+    
+            > .copyright {
+                margin: 20px 0 10px;
+            }
+        }
+    }
+}

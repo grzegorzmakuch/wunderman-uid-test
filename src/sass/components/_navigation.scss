@@ -1,5 +1,9 @@
 #hero nav,
 #footer nav {
+    // #burger {
+    //     display: none;
+    // }
+
     > a {
         color: $almostWhite;
         display: inline-block;
@@ -8,6 +12,27 @@
         letter-spacing: 2px;
         &:hover {
             color: $greyCreme;
+        }
+    }
+}
+
+@media screen and (max-width: 770px) {
+
+    #hero nav {
+        display: none;
+    }
+
+    // #hero #burger {
+    //     display: block;
+    // }
+
+    #footer nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        > a {
+            padding: 10px 0;
         }
     }
 }

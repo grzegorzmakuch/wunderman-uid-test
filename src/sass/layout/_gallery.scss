@@ -36,3 +36,22 @@
         }
     }
 }
+
+@media screen and (max-width: 770px) {
+    .gallery {
+        
+        > .container {
+            flex-direction: column;
+
+            > .img-viewer {
+                width: 100%;
+            }
+
+            > aside {
+                width: 100%;
+                padding-left: 10px;
+                padding-right: 20%;
+            }
+        }
+    }
+}
